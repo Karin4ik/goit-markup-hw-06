@@ -1,0 +1,91 @@
+:root {
+  --primary-text-collor: #757575;
+  --title-text-collor: #212121;
+  --accent-text-collor: #2196f3;
+  --white-text-collor: #ffffff;
+  --primary-bg-collor: #f5f5f5;
+}
+
+body {
+  background-color: var(--primary-bg-collor);
+  color: var(--primary-text-collor);
+  font-family: Roboto, sans-serif;
+  letter-spacing: 0.03em;
+}
+/* колір основного тексту #757575; */
+/* вторинний колір текста #212121 */
+/* білий колір #FFFFFF */
+/* акцент #2196F3 */
+/* основний колір фону #F5F5F5 */
+/* вторинний колир фону #F5F4FA */
+
+/* logo */
+
+.logo {
+  color: var(--accent-text-collor);
+  font-family: Raleway, cursive;
+
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+
+.list {
+  list-style: none;
+}
+/* site-nav */
+.site-nav .link {
+  color: var(--title-text-collor);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--title-text-collor);
+}
+
+.site-nav .link.current {
+  color: var(--accent-text-collor);
+}
+/* hero */
+
+.hero-title {
+  color: var(--white-text-collor);
+  background-color: #2f303a;
+}
+
+.button {
+  color: var(--white-text-collor);
+  background-color: var(--accent-text-collor);
+}
+
+/* section */
+
+.section-title {
+  color: var(--title-text-collor);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+/* features */
+.features .title {
+  color: var(--title-text-collor);
+}
+/* team */
+
+.member {
+  color: var(--title-text-collor);
+}
