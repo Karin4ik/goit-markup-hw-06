@@ -9,8 +9,11 @@
 body {
   background-color: var(--primary-bg-collor);
   color: var(--primary-text-collor);
+
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
+  font-size: 14px;
+  line-height: 1.71;
 }
 /* колір основного тексту #757575; */
 /* вторинний колір текста #212121 */
@@ -28,6 +31,11 @@ body {
   font-size: 26px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.accent {
+  color: var(--accent-text-collor);
 }
 
 .list {
@@ -36,10 +44,12 @@ body {
 /* site-nav */
 .site-nav .link {
   color: var(--title-text-collor);
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  text-decoration: none;
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -49,22 +59,44 @@ body {
 .site-nav .link.current {
   color: var(--accent-text-collor);
 }
+
+.contakts {
+  text-decoration: none;
+}
+
 /* hero */
 
 .hero-title {
   color: var(--white-text-collor);
   background-color: #2f303a;
+
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.4;
+  text-align: center;
+  letter-spacing: 0.03em;
 }
 
 .button {
   color: var(--white-text-collor);
   background-color: var(--accent-text-collor);
+  cursor: pointer;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  text-align: center;
 }
 
 /* section */
 
 .section-title {
   color: var(--title-text-collor);
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-align: center;
 }
 
 .visually-hidden {
@@ -83,9 +115,39 @@ body {
 /* features */
 .features .title {
   color: var(--title-text-collor);
-}
-/* team */
 
-.member {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  list-style: none;
+}
+
+/* team */
+.items {
+  background-color: #f5f4fa;
+}
+
+.item {
   color: var(--title-text-collor);
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.item-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.18;
+}
+
+.list-button {
+  color: var(--white-text-collor);
+  background-color: var(--accent-text-collor);
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
 }
