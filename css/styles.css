@@ -4,6 +4,7 @@
   --accent-text-collor: #2196f3;
   --white-text-collor: #ffffff;
   --primary-bg-collor: #f5f5f5;
+  --secondary-bg-collor: #2f303a;
 }
 
 body {
@@ -25,7 +26,7 @@ body {
 /* logo */
 
 .logo {
-  color: var(--accent-text-collor);
+  color: var(--title-text-collor);
   font-family: Raleway, cursive;
 
   font-size: 26px;
@@ -60,7 +61,7 @@ body {
   color: var(--accent-text-collor);
 }
 
-.contakts {
+.contakts .link {
   text-decoration: none;
 }
 
@@ -68,7 +69,7 @@ body {
 
 .hero-title {
   color: var(--white-text-collor);
-  background-color: #2f303a;
+  background-color: var(--secondary-bg-collor);
 
   font-weight: 900;
   font-size: 44px;
@@ -150,4 +151,68 @@ body {
   font-size: 16px;
   line-height: 1.6;
   text-align: center;
+}
+/* футер */
+.footer {
+  background-color: var(--secondary-bg-collor);
+}
+
+.logo-link {
+  color: var(--white-text-collor);
+
+  font-family: "Raleway";
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+.accent-link {
+  color: #2196f3;
+}
+
+.address .address-text {
+  color: var(--white-text-collor);
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.address-link .link:hover,
+.accent-link .link:focus {
+  color: var(--accent-text-collor);
+}
+
+.address-link {
+  color: var(--primary-text-collor);
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.address .link {
+  text-decoration: none;
+}
+
+/* портфоліо */
+
+.btn-list .list {
+  list-style: none;
+}
+
+.btn {
+  color: var(--title-text-collor);
+  cursor: pointer;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--accent-text-collor);
 }
