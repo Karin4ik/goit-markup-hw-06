@@ -43,7 +43,8 @@ body {
   list-style: none;
 }
 
-.link {
+.link,
+.projects-item {
   text-decoration: none;
 }
 /* site-nav */
@@ -183,12 +184,12 @@ body {
   line-height: 1.7;
 }
 
-.link:hover,
-.link:focus {
+.address-item:hover,
+.address-item:focus {
   color: var(--accent-text-collor);
 }
 
-.link {
+.address-item {
   color: rgba(255, 255, 255, 0.6);
 
   text-decoration: none;
