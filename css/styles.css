@@ -42,6 +42,10 @@ body {
 .list {
   list-style: none;
 }
+
+.link {
+  text-decoration: none;
+}
 /* site-nav */
 .site-nav .link {
   color: var(--title-text-collor);
@@ -53,8 +57,10 @@ body {
   text-decoration: none;
 }
 .site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--title-text-collor);
+.site-nav .link:focus,
+.contakts .link:hover,
+.contakts .link:focus {
+  color: var(--accent-text-collor);
 }
 
 .site-nav .link.current {
@@ -62,6 +68,12 @@ body {
 }
 
 .contakts .link {
+  color: var(--primary-text-collor);
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
   text-decoration: none;
 }
 
@@ -125,7 +137,7 @@ body {
 
 /* team */
 .items {
-  background-color: #f5f4fa;
+  background-color: var(--primary-bg-collor);
 }
 
 .item {
@@ -142,17 +154,8 @@ body {
   line-height: 1.18;
 }
 
-.list-button {
-  color: var(--white-text-collor);
-  background-color: var(--accent-text-collor);
-  cursor: pointer;
-
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
-}
 /* футер */
+
 .footer {
   background-color: var(--secondary-bg-collor);
 }
@@ -167,41 +170,35 @@ body {
   text-decoration: none;
 }
 .accent-link {
-  color: #2196f3;
-}
-
-.address .address-text {
-  color: var(--white-text-collor);
-
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-}
-
-.address-link .link:hover,
-.accent-link .link:focus {
   color: var(--accent-text-collor);
 }
 
-.address-link {
-  color: var(--primary-text-collor);
+.text {
+  color: var(--white-text-collor);
 
+  text-decoration: none;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
 }
 
-.address .link {
+.link:hover,
+.link:focus {
+  color: var(--accent-text-collor);
+}
+
+.link {
+  color: rgba(255, 255, 255, 0.6);
+
   text-decoration: none;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
 }
 
 /* портфоліо */
-
-.btn-list .list {
-  list-style: none;
-}
 
 .btn {
   color: var(--title-text-collor);
@@ -215,4 +212,21 @@ body {
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-text-collor);
+}
+
+.projects-title {
+  color: var(--title-text-collor);
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+
+.projects-text {
+  color: var(--primary-text-collor);
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.9;
 }
