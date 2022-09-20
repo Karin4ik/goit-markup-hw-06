@@ -14,7 +14,6 @@ body {
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
   font-size: 14px;
-  line-height: 1.71;
 }
 /* колір основного тексту #757575; */
 /* вторинний колір текста #212121 */
@@ -83,12 +82,13 @@ body {
 .hero-title {
   color: var(--white-text-collor);
   background-color: var(--secondary-bg-collor);
+  text-transform: uppercase;
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.4;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.06em;
 }
 
 .button {
@@ -100,6 +100,7 @@ body {
   font-size: 16px;
   line-height: 1.9;
   text-align: center;
+  letter-spacing: 0.06em;
 }
 
 /* section */
@@ -108,8 +109,8 @@ body {
   color: var(--title-text-collor);
 
   font-weight: 700;
-  font-size: 14px;
-  line-height: 1.1;
+  font-size: 36px;
+  line-height: 1.2;
   text-align: center;
 }
 
@@ -150,7 +151,6 @@ body {
 }
 
 .item-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
 }
@@ -179,7 +179,6 @@ body {
 
   text-decoration: none;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
 }
@@ -194,7 +193,6 @@ body {
 
   text-decoration: none;
   font-style: normal;
-  font-weight: 400;
   font-size: 14px;
   line-height: 1.7;
 }
@@ -205,6 +203,7 @@ body {
   color: var(--title-text-collor);
   cursor: pointer;
 
+  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
@@ -213,6 +212,7 @@ body {
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-text-collor);
+  color: var(--white-text-collor);
 }
 
 .projects-title {
@@ -227,7 +227,6 @@ body {
 .projects-text {
   color: var(--primary-text-collor);
 
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.9;
 }
