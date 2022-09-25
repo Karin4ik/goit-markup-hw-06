@@ -5,6 +5,16 @@
   --white-text-collor: #ffffff;
   --primary-bg-collor: #f5f5f5;
   --secondary-bg-collor: #2f303a;
+  --team-bg-collor: #f5f4fa;
+}
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
 
 body {
@@ -24,6 +34,23 @@ body {
 
 /* logo */
 
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1170px;
+  outline: 2px solid tomato;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 .logo {
   color: var(--title-text-collor);
   font-family: Raleway, cursive;
@@ -39,6 +66,8 @@ body {
 }
 
 .list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -77,9 +106,22 @@ body {
   text-decoration: none;
 }
 
+.contakts {
+  background-color: darkgray;
+}
 /* hero */
 
+.hero {
+  background-color: var(--secondary-bg-collor);
+  text-align: center;
+
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   color: var(--white-text-collor);
   background-color: var(--secondary-bg-collor);
   text-transform: uppercase;
@@ -92,6 +134,13 @@ body {
 }
 
 .button {
+  display: inline-block;
+  border-radius: 4px;
+  border: transparent;
+  padding: 10px 32px;
+  margin: 0 auto;
+  min-width: 216px;
+
   color: var(--white-text-collor);
   background-color: var(--accent-text-collor);
   cursor: pointer;
@@ -99,14 +148,21 @@ body {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
-  text-align: center;
   letter-spacing: 0.06em;
 }
 
 /* section */
+ul {
+  margin: 0;
+  padding-left: 0;
+}
 
 .section-title {
   color: var(--title-text-collor);
+
+  padding-top: 94px;
+  margin-top: 0;
+  margin-bottom: 50px;
 
   font-weight: 700;
   font-size: 36px;
@@ -128,8 +184,19 @@ body {
 }
 
 /* features */
+
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  margin-left: 215px;
+  margin-right: 215px;
+}
+
 .features .title {
   color: var(--title-text-collor);
+
+  margin-top: 0;
+  margin-bottom: 10px;
 
   font-weight: 700;
   font-size: 14px;
@@ -137,9 +204,30 @@ body {
   list-style: none;
 }
 
+.features p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.item-pictures {
+  margin-right: 30px;
+}
+
 /* team */
 .items {
-  background-color: var(--primary-bg-collor);
+  background-color: var(--team-bg-collor);
+}
+
+.item-list {
+  padding-bottom: 94px;
+  padding-left: 215px;
+  padding-right: 215px;
 }
 
 .item {
@@ -148,17 +236,26 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
+
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
 
 .item-text {
   font-size: 16px;
   line-height: 1.18;
+
+  margin-bottom: 30px;
 }
 
 /* футер */
 
 .footer {
   background-color: var(--secondary-bg-collor);
+  padding-left: 215px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  /* padding: 60px 1154px 60px 215px; */
 }
 
 .logo-link {
@@ -188,6 +285,10 @@ body {
   color: var(--accent-text-collor);
 }
 
+.address-text {
+  margin-top: 20px;
+}
+
 .address-item {
   color: rgba(255, 255, 255, 0.6);
 
@@ -195,11 +296,18 @@ body {
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
+
+  margin-top: 9px;
+}
+
+.address-link {
+  margin-top: 9px;
 }
 
 /* портфоліо */
 
 .btn {
+  border-radius: 4px;
   color: var(--title-text-collor);
   cursor: pointer;
 
