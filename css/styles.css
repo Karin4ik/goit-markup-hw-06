@@ -86,7 +86,6 @@ ol {
 .site-nav {
   display: flex;
   margin-left: 93px;
-  gap: 50px;
 }
 
 .site-nav .item:not(:last-child) {
@@ -393,6 +392,8 @@ img {
 .projects {
   flex-wrap: wrap;
   gap: 30px;
+
+  padding: 94px 0;
 }
 
 .projects-title {
