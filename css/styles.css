@@ -35,10 +35,11 @@ body {
 /* logo */
 
 .container {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1170px;
-  outline: 2px solid tomato;
+  padding: 0 15px;
+  margin: 0 auto;
+  width: 1200px;
+
+  /*outline: 2px solid tomato;*/
 }
 
 p,
@@ -49,6 +50,18 @@ h4,
 h5,
 h6 {
   margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .logo {
@@ -65,18 +78,33 @@ h6 {
   color: var(--accent-text-collor);
 }
 
-.list {
-  padding: 0;
-  margin: 0;
-  list-style: none;
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+  gap: 50px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
 }
 
 .link,
 .projects-item {
   text-decoration: none;
 }
+
 /* site-nav */
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-collor);
 
   font-weight: 500;
@@ -85,6 +113,7 @@ h6 {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
+
 .site-nav .link:hover,
 .site-nav .link:focus,
 .contakts .link:hover,
@@ -94,6 +123,20 @@ h6 {
 
 .site-nav .link.current {
   color: var(--accent-text-collor);
+}
+/*====== Auth nav ======*/
+.auth-nav {
+  display: flex;
+  align-items: center;
+  margin: auto;
+}
+
+.auth-nav .site-nav + .site-nav {
+  margin-left: 48px;
+}
+
+.contakts {
+  gap: 50px;
 }
 
 .contakts .link {
@@ -106,10 +149,7 @@ h6 {
   text-decoration: none;
 }
 
-.contakts {
-  background-color: darkgray;
-}
-/* hero */
+/*===== hero ======*/
 
 .hero {
   background-color: var(--secondary-bg-collor);
@@ -122,6 +162,8 @@ h6 {
 .hero-title {
   margin-top: 0;
   margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
   color: var(--white-text-collor);
   background-color: var(--secondary-bg-collor);
   text-transform: uppercase;
@@ -136,14 +178,17 @@ h6 {
 .button {
   display: inline-block;
   border-radius: 4px;
-  border: transparent;
+  border: none;
   padding: 10px 32px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 30px;
   min-width: 216px;
 
   color: var(--white-text-collor);
   background-color: var(--accent-text-collor);
   cursor: pointer;
+  text-transform: uppercase;
 
   font-weight: 700;
   font-size: 16px;
@@ -151,16 +196,26 @@ h6 {
   letter-spacing: 0.06em;
 }
 
-/* section */
-ul {
-  margin: 0;
-  padding-left: 0;
+.button:hover,
+.button:focus {
+  color: var(--accent-text-collor);
+}
+
+/*===== section Особливості =====*/
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .section-title {
   color: var(--title-text-collor);
 
-  padding-top: 94px;
   margin-top: 0;
   margin-bottom: 50px;
 
@@ -183,19 +238,16 @@ ul {
   margin: -1px;
 }
 
-/* features */
+/*====== features ======*/
 
-.features {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  margin-left: 215px;
-  margin-right: 215px;
+.features .item {
+  width: 270px;
 }
 
-.features .title {
+.features .titles {
   color: var(--title-text-collor);
+  text-transform: uppercase;
 
-  margin-top: 0;
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -209,33 +261,38 @@ ul {
   margin-bottom: 0;
 }
 
+.features .item:not(:last-child) {
+  margin-right: 30px;
+  margin-bottom: 10px;
+}
+/*====== Чим ми займаємося ======*/
+
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.item-pictures {
+.item-pictures:not(:last-child) {
   margin-right: 30px;
 }
 
-/* team */
+/*====== team ======*/
 .items {
   background-color: var(--team-bg-collor);
 }
 
 .item-list {
   padding-bottom: 94px;
-  padding-left: 215px;
-  padding-right: 215px;
 }
 
-.item {
+.title {
   color: var(--title-text-collor);
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
+  text-align: center;
 
   margin-top: 30px;
   margin-bottom: 10px;
@@ -244,15 +301,15 @@ img {
 .item-text {
   font-size: 16px;
   line-height: 1.18;
+  text-align: center;
 
   margin-bottom: 30px;
 }
 
-/* футер */
+/*====== футтер ======*/
 
 .footer {
   background-color: var(--secondary-bg-collor);
-  padding-left: 215px;
   padding-top: 60px;
   padding-bottom: 60px;
   /* padding: 60px 1154px 60px 215px; */
@@ -304,7 +361,14 @@ img {
   margin-top: 9px;
 }
 
-/* портфоліо */
+/*----- ПОРТФОЛІО----- */
+
+.btn-list {
+  margin-bottom: 50px;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
 
 .btn {
   border-radius: 4px;
@@ -315,12 +379,20 @@ img {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.6;
+  max-height: 38px;
+
+  padding: 6px 22px 6px 22px;
 }
 
 .btn:hover,
 .btn:focus {
   background-color: var(--accent-text-collor);
   color: var(--white-text-collor);
+}
+
+.projects {
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 .projects-title {
@@ -330,6 +402,8 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+
+  margin-bottom: 4px;
 }
 
 .projects-text {
@@ -337,4 +411,9 @@ img {
 
   font-size: 16px;
   line-height: 1.9;
+}
+
+.projects-item,
+.projects-text {
+  padding: 20px 24px;
 }
