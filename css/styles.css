@@ -618,6 +618,8 @@ img {
 }
 
 .projects-item {
+  display: block;
+
   background-color: var(--white-text-collor);
   text-decoration: none;
   cursor: pointer;
