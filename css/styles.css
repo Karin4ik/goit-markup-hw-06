@@ -1,13 +1,16 @@
 :root {
-  --primary-text-collor: #757575;
-  --title-text-collor: #212121;
-  --accent-text-collor: #2196f3;
-  --white-text-collor: #ffffff;
-  --primary-bg-collor: #f5f5f5;
-  --secondary-bg-collor: #2f303a;
-  --team-bg-collor: #f5f4fa;
-  --border-collor-img: #eeeeee;
+  --primary-text-color: #757575;
+  --title-text-color: #212121;
+  --accent-text-color: #2196f3;
+  --white-text-color: #ffffff;
+  --primary-bg-color: #f5f5f5;
+  --secondary-bg-color: #2f303a;
+  --team-bg-color: #f5f4fa;
+  --border-color-img: #eeeeee;
   --color-icon: ##afb1b8;
+  --button-focus-color: #188ce8;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --background-actions: #2f303a;
 }
 html {
   box-sizing: border-box;
@@ -20,8 +23,8 @@ html {
 }
 
 body {
-  color: var(--primary-text-collor);
-  background-color: var(--white-text-collor);
+  color: var(--primary-text-color);
+  background-color: var(--white-text-color);
 
   font-family: Roboto, sans-serif;
   letter-spacing: 0.03em;
@@ -71,7 +74,7 @@ ol {
 }
 
 .logo {
-  color: var(--title-text-collor);
+  color: var(--title-text-color);
   font-family: Raleway, cursive;
 
   font-size: 26px;
@@ -81,7 +84,7 @@ ol {
 }
 
 .accent {
-  color: var(--accent-text-collor);
+  color: var(--accent-text-color);
 }
 
 .main-nav {
@@ -95,7 +98,7 @@ ol {
 }
 
 .site-nav .item {
-  color: var(--title-text-collor);
+  color: var(--title-text-color);
 
   font-weight: 500;
   font-size: 14px;
@@ -106,6 +109,23 @@ ol {
 
 .site-nav .item:not(:last-child) {
   margin-right: 50px;
+}
+
+.site-nav .link.current {
+  color: var(--accent-text-color);
+  position: relative;
+}
+
+.current::after {
+  content: "";
+  background-color: var(--accent-text-color);
+
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
 }
 
 .link,
@@ -120,13 +140,15 @@ ol {
   padding-top: 32px;
   padding-bottom: 32px;
 
-  color: var(--title-text-collor);
+  color: var(--title-text-color);
 
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   text-decoration: none;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .icon-mail {
@@ -145,12 +167,9 @@ ol {
 .site-nav .link:focus,
 .contakts .link:hover,
 .contakts .link:focus {
-  color: var(--accent-text-collor);
+  color: var(--accent-text-color);
 }
 
-.site-nav .link.current {
-  color: var(--accent-text-collor);
-}
 /*====== Auth nav ======*/
 .auth-nav {
   display: flex;
@@ -172,7 +191,7 @@ ol {
 }
 
 .contakts .link {
-  color: var(--primary-text-collor);
+  color: var(--primary-text-color);
 
   font-weight: 500;
   font-size: 14px;
@@ -205,7 +224,7 @@ ol {
   margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
-  color: var(--white-text-collor);
+  color: var(--white-text-color);
   text-transform: uppercase;
 
   width: 696px;
@@ -225,19 +244,21 @@ ol {
   margin-left: auto;
   min-width: 216px;
 
-  color: var(--white-text-collor);
-  background-color: var(--accent-text-collor);
+  color: var(--white-text-color);
+  background-color: var(--accent-text-color);
   cursor: pointer;
 
   font-weight: 700;
   font-size: 16px;
   line-height: 1.9;
   letter-spacing: 0.06em;
+
+  transition-property: background-color 250ms var(--timing-function);
 }
 
 .button:hover,
 .button:focus {
-  color: var(--white-text-collor);
+  background-color: var(--button-focus-color);
 }
 
 /*===== section Особливості =====*/
@@ -261,14 +282,14 @@ ol {
   justify-content: center;
   width: 270px;
   height: 120px;
-  background-color: var(--team-bg-collor);
+  background-color: var(--team-bg-color);
   border-radius: 4px;
   margin-bottom: 30px;
   align-items: center;
 }
 
 .section-title {
-  color: var(--title-text-collor);
+  color: var(--title-text-color);
 
   margin-top: 0;
   margin-bottom: 50px;
@@ -303,7 +324,7 @@ ol {
 }
 
 .features .titles {
-  color: var(--title-text-collor);
+  color: var(--title-text-color);
   text-transform: uppercase;
 
   margin-bottom: 10px;
@@ -340,20 +361,41 @@ img {
   margin-right: 30px;
 }
 
+.item-actions {
+  color: var(--white-text-color);
+  background-color: var(--background-actions);
+  opacity: 0.8;
+  justify-content: center;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  display: flex;
+  bottom: 0;
+  align-items: center;
+
+  position: absolute;
+  width: 100%;
+  height: 70px;
+}
 /*====== team ======*/
 .item-pictures {
-  background-color: var(--white-text-collor);
+  position: relative;
+  background-color: var(--white-text-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
 .items {
-  background-color: var(--team-bg-collor);
+  background-color: var(--team-bg-color);
 }
 
 .title {
-  color: var(--title-text-collor);
+  color: var(--title-text-color);
 
   font-weight: 500;
   font-size: 16px;
@@ -393,6 +435,8 @@ img {
 
   align-items: center;
   justify-content: center;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .network-icon {
@@ -401,8 +445,8 @@ img {
 
 .social-link:hover,
 .social-link:focus {
-  background-color: var(--accent-text-collor);
-  color: var(--white-text-collor);
+  background-color: var(--accent-text-color);
+  color: var(--white-text-color);
 }
 
 .icon-button:not(:last-child) {
@@ -430,7 +474,7 @@ img {
 .clients-link {
   display: flex;
 
-  color: #afb1b8;
+  fill: #afb1b8;
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid #afb1b8;
@@ -440,16 +484,14 @@ img {
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .clients-link:hover,
 .clients-link:focus {
-  color: var(--accent-text-collor);
-  border-color: var(--accent-text-collor);
-}
-
-.logo-clients {
-  fill: currentColor;
+  fill: var(--accent-text-color);
+  border-color: var(--accent-text-color);
 }
 
 .list-logo {
@@ -461,7 +503,7 @@ img {
 /*====== футтер ======*/
 
 .footer {
-  background-color: var(--secondary-bg-collor);
+  background-color: var(--secondary-bg-color);
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -472,17 +514,18 @@ img {
 }
 
 .head-footer {
-  color: var(--white-text-collor);
+  color: var(--white-text-color);
 
   margin-bottom: 20px;
   font-style: normal;
   font-size: 14px;
   line-height: 1.14;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
 .logo-link {
-  color: var(--white-text-collor);
+  color: var(--white-text-color);
 
   font-family: "Raleway";
   font-size: 26px;
@@ -491,11 +534,11 @@ img {
   text-decoration: none;
 }
 .accent-link {
-  color: var(--accent-text-collor);
+  color: var(--accent-text-color);
 }
 
 .text {
-  color: var(--white-text-collor);
+  color: var(--white-text-color);
 
   text-decoration: none;
   font-style: normal;
@@ -509,7 +552,7 @@ img {
 
 .address-item:hover,
 .address-item:focus {
-  color: var(--accent-text-collor);
+  color: var(--accent-text-color);
 }
 
 .address-item {
@@ -519,6 +562,8 @@ img {
   font-style: normal;
   font-size: 14px;
   line-height: 1.7;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .address-text {
@@ -549,7 +594,7 @@ img {
 }
 
 .social-link-footer {
-  color: var(--white-text-collor);
+  color: var(--white-text-color);
   background: rgba(255, 255, 255, 0.1);
 
   display: flex;
@@ -559,12 +604,14 @@ img {
 
   align-items: center;
   justify-content: center;
+
+  transition: color 250ms var(--timing-function);
 }
 
 .social-link-footer:hover,
 .social-link-footer:focus {
-  background-color: var(--accent-text-collor);
-  color: var(--white-text-collor);
+  background-color: var(--accent-text-color);
+  color: var(--white-text-color);
 }
 
 .icon-button:not(:last-child) {
@@ -588,8 +635,8 @@ img {
 .btn {
   border-radius: 4px;
   border: transparent;
-  color: var(--title-text-collor);
-  background-color: var(--team-bg-collor);
+  color: var(--title-text-color);
+  background-color: var(--team-bg-color);
   cursor: pointer;
 
   font-family: inherit;
@@ -599,12 +646,17 @@ img {
   max-height: 38px;
 
   padding: 6px 22px 6px 22px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn:hover,
 .btn:focus {
-  background-color: var(--accent-text-collor);
-  color: var(--white-text-collor);
+  background-color: var(--accent-text-color);
+  color: var(--white-text-color);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .section-projects {
@@ -619,10 +671,11 @@ img {
 
 .projects-item {
   display: block;
-
-  background-color: var(--white-text-collor);
-  text-decoration: none;
   cursor: pointer;
+
+  background-color: var(--white-text-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-item:hover,
@@ -631,8 +684,47 @@ img {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.overlay-thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-thumb::before {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: transform 250ms linear;
+}
+
+.overlay-text {
+  color: var(--white-text-color);
+  background-color: rgba(33, 150, 243, 0.9);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  padding: 63px 24px;
+
+  transition: transform 250ms linear;
+  transform: translateY(100%);
+}
+
+.overlay:hover .overlay-thumb::before, 
+.overlay:hover .overlay-text {
+  transform: translateY(0);
+}
+
 .projects-title {
-  color: var(--title-text-collor);
+  color: var(--title-text-color);
 
   font-weight: 700;
   font-size: 18px;
@@ -643,7 +735,7 @@ img {
 }
 
 .projects-text {
-  color: var(--primary-text-collor);
+  color: var(--primary-text-color);
 
   font-size: 16px;
   line-height: 1.9;
@@ -651,6 +743,14 @@ img {
 
 .name-projects {
   padding: 20px 24px;
-  border: 1px solid var(--border-collor-img);
+  border: 1px solid var(--border-color-img);
   border-top: 0;
 }
+/*
+.backdrop {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+*/
