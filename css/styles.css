@@ -437,7 +437,7 @@ img {
   align-items: center;
   justify-content: center;
 
-  transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function) ;
 }
 
 .network-icon {
@@ -486,7 +486,7 @@ img {
   align-items: center;
   box-sizing: border-box;
 
-  transition: color 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function), border 250ms var(--timing-function);
 }
 
 .clients-link:hover,
@@ -606,7 +606,7 @@ img {
   align-items: center;
   justify-content: center;
 
-  transition: color 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function), background-color color 250ms var(--timing-function);
 }
 
 .social-link-footer:hover,
